@@ -75,7 +75,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 container"> <!--agrego la clase container para que el contenido quede centrado -->
             @yield('content')
         </main>
     </div>
