@@ -27,7 +27,9 @@ class PeliculasController extends Controller
      */
     public function create()
     {
-        //
+        //retorno la vista con el formulario
+        return view("peliculas.create");
+
     }
 
     /**
@@ -49,7 +51,11 @@ class PeliculasController extends Controller
      */
     public function show($id)
     {
-        //
+        //muestro la pelicula pedida
+        $pelicula = Pelicula::findOrFail($id); //obtengo la pelicula y muestro un error 404 si no la encuentra
+
+        return view("peliculas.show", ["pelicula"=>$pelicula]);
+
     }
 
     /**
