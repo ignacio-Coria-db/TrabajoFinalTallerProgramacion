@@ -17,11 +17,20 @@ class CreatePeliculasTable extends Migration
             $table->id();
             $table->string("titulo");
             $table->date("anio");
-            $table->string("director");
             $table->string("imagen_portada");
-            $table->json("actores");
-
+            $table->json("actores_principales");
+            $table->unsignedBigInteger("user_id");
+            $table->unsignedBigInteger("genero_id");
+            $table->unsignedBigInteger("director_id");
             $table->timestamps();
+
+            //claves foraneas
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('genero_id')->references('id')->on('generos');
+            $table->foreign('director_id')->references('id')->on('directores');
+
+
+
         });
     }
 
