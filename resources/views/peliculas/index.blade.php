@@ -8,11 +8,10 @@
 @if(count($peliculas) >0) <!--si tengo cargadas peliculas-->
     @foreach($peliculas as $pelicula)
         <div class="card">
-            <h3><a href="/peliculas/{{$pelicula->id}}">{{$pelicula->titulo}}</a></h3>
-            <h3>{{$pelicula->titulo}}</h3>
-            <h3>{{$pelicula->anio}}</h3>
-            <h3>{{$pelicula->director}}</h3>
-            <h3>{{$pelicula->genero}}</h3>
+            <h3><a href="/peliculas/{{$pelicula->id}}">Titulo: {{$pelicula->titulo}}</a></h3>
+            <h3>Año: {{$pelicula->anio}}</h3>
+            <h3>Director: {{$pelicula->director_id}}</h3>
+            <h3>Genero: {{$pelicula->genero_id}}</h3>
 
 
         </div>
