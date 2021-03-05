@@ -14,15 +14,16 @@
 
 
 <form class="row g-3" action="/peliculas" method="POST" enctype="multipart/form-data">
+  
   <div class="col-md-12">
     <label for="titulo">Titulo</label>
-    <input type="text" class="form-control" name="titulo" required>
+    <input type="text" class="form-control" name="titulo" >
   </div>
 
   <div class="col-md-3">
   <br>
-    <label for="anio" class="form-label">Año</label>
-    <input type="date" class="form-control" name="anio"  required>
+    <label for="año" class="form-label">Año</label>
+    <input type="date" class="form-control" name="año"  >
   </div>
 
   <div class="col-md-3">

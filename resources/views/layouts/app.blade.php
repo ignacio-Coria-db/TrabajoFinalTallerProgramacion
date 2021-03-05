@@ -76,7 +76,9 @@
         </nav>
 
         <main class="py-4 container"> <!--agrego la clase container para que el contenido quede centrado -->
+        @include('inc.mensajes') <!--mensajes-->    
             @yield('content')
+
         </main>
     </div>
 </body>
