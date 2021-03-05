@@ -11,6 +11,12 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+     //con esta relacion dado un objeto usuario voy a poder traer todas las peliculas del usuario
+    public function peliculas(){ 
+       return $this->hasMany("\App\Models\Pelicula"); //un usuario tiene muchas peliculas
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *

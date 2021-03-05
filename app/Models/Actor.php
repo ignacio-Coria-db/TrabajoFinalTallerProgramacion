@@ -10,4 +10,6 @@ class Actor extends Model
     use HasFactory;
     protected $table ="actores";
 
+   
+
 }
